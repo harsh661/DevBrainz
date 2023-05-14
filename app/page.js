@@ -1,9 +1,12 @@
+import Feed from "@components/Feed"
 import Navbar from "@components/Navbar"
 
 const Home = () => {
   return (
     <section>
+
       <Navbar />
+
       <main className="w-full max-w-7xl mx-auto my-10 sm:my-20 flex flex-col z-10">
         <header className="p-5 sm:p-10 flex flex-col gap-5">
           <h1 className="head_text text-5xl sm:text-7xl">
@@ -17,9 +20,11 @@ const Home = () => {
           </div>
           {/* Vector image for hero section */}
           <div className="flex w-full justify-center">
-            <img src="g1671.svg" alt="Developers discussing their ideas" className="hidden lg:flex" />
+            <img src="hero.svg" alt="Developers discussing their ideas" className="hidden lg:flex" />
           </div>
         </header>
+
+        <Feed />
       </main>
     </section>
   )
