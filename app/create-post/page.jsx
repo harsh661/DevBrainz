@@ -2,12 +2,12 @@
 
 import Form from '@components/Form'
 import { useSession } from 'next-auth/react'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import React, { useState } from 'react'
 
 const CreatePost = () => {
-  const {data: session} = useSession()
   const router = useRouter()
+  const {data: session} = useSession()
 
   const[submitting, setSubmitting] = useState(false)
   const[post, setPost] = useState({
@@ -20,7 +20,7 @@ const CreatePost = () => {
     setSubmitting(true)
 
     // Creating a post
-    
+
     try {
       const response = await fetch('/api/post/new', {
         method: 'POST',

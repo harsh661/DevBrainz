@@ -18,6 +18,7 @@ const Form = ({ type, post, submitting, handleSubmit, setPost }) => {
                     minRows={2}
                     className='glassmorphism outline-none border border-zinc-400 w-full rounded-md p-3 resize-none'
                     placeholder="Add relatable tags ( #tag1, #tag2... )"
+                    onChange={(e) => setPost({ ...post, tag: e.target.value})}
                     required
                 />
                 <button 
