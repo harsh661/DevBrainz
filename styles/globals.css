@@ -52,6 +52,12 @@ body {
   -webkit-backdrop-filter: blur( 7px );
 }
 
+.glassmorphism {
+  background: rgba( 255, 255, 255, 0.45 );
+  backdrop-filter: blur( 5.5px );
+  -webkit-backdrop-filter: blur( 5.5px );
+}
+
 /* Animations */
 
 .underline_animate:after {    

@@ -9,7 +9,6 @@ const Navbar = () => {
   const {data: session} = useSession()
   const[nav, setNav] = useState(false)
   const[providers, setProviders] = useState(null)
-  const[navColor, setNavColor] = useState('bg-transparent')
 
   useEffect(() => {
     const setProvider = async () => {
@@ -20,22 +19,8 @@ const Navbar = () => {
     setProvider()
   }, [])
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setNavColor('bg-white');
-      } else {
-        setNavColor('bg-transparent');
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    }
-  }, [])
-
   return (
-    <nav className={`sticky top-0 ${navColor} flex justify-between items-center w-full text-dark-text font-semibold sm:px-6 px-3 py-3`}>
+    <nav className={`sticky top-0 glassmorphism flex justify-between items-center w-full text-dark-text sm:px-6 px-3 py-3`}>
         <div className='flex gap-2 items-center sm:text-2xl text-xl'>
             <Link href='/' className='flex items-center gap-2'>
               <Image src='/assets/images/logo.png' alt='Logo' width={48} height={20}/>
