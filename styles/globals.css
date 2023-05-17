@@ -45,6 +45,13 @@ body {
   font-family: 'Recoleta', 'Times New Roman';
 }
 
+.blurred_card {
+  background: rgba( 255, 255, 255, 0.55 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 7px );
+  -webkit-backdrop-filter: blur( 7px );
+}
+
 /* Animations */
 
 .underline_animate:after {    
@@ -65,3 +72,20 @@ body {
 }
   
 
+
+
+.navigation {
+  animation: myAnim 500ms ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
