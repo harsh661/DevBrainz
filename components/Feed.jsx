@@ -1,11 +1,22 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
+import Card from './Card'
+
+
+// List out all the post Cards in this element
 
 const CardList = ({data, handleClick}) => {
   return (
-    <div className='flex flex-col max-w-2xl bg-red-500 mx-auto'>
-
+    <div className='flex flex-col gap-10 w-full max-w-2xl mx-auto px-5 mb-20'>
+      {data?.map((post) => (
+        <Card 
+          key={post._id}
+          creator={post.creator}
+          content={post.content}
+          tag={post.tag}
+        />
+      ))}
     </div>
   )
 }
@@ -24,7 +35,7 @@ const Feed = () => {
   }
 
   const fetchPost = async () => {
-    const res = await fetch('/api/posts')
+    const res = await fetch('/api/post')
     const data = await res.json()
 
     setPosts(data)
@@ -49,7 +60,7 @@ const Feed = () => {
         </header>
 
         <CardList 
-          data={[]}
+          data={posts}
           handleClick={() => {}}
         />
       </main>
