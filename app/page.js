@@ -36,9 +36,8 @@ const Home = () => {
             />
           </div>
         </header>
-
-        <Feed />
       </main>
+      <Feed />
     </section>
   )
 }
