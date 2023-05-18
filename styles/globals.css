@@ -1,4 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/recoleta');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -11,7 +11,8 @@ body {
 .main {
   width: 100vw;
   min-height: 100vh;
-  position: fixed;
+  position: absolute;
+  top: 0;
   display: flex;
   justify-content: center;
   pointer-events: none;
@@ -36,13 +37,13 @@ body {
     content: "";
     width: 100%;
     height: 100%;
-    filter: blur(100px) saturate(150%);
+    filter: blur(90px) saturate(150%);
     top: 80px;
-    opacity: 0.15;
+    opacity: 0.2;
   }
 
 .head_text {
-  font-family: 'Recoleta', 'Times New Roman';
+  font-family: 'Playfair Display', 'Times New Roman';
 }
 
 .blurred_card {
@@ -53,7 +54,7 @@ body {
 }
 
 .glassmorphism {
-  background: rgba( 255, 255, 255, 0.45 );
+  background: rgba( 255, 255, 255, 0.7 );
   backdrop-filter: blur( 5.5px );
   -webkit-backdrop-filter: blur( 5.5px );
 }

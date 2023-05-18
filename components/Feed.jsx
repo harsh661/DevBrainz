@@ -13,6 +13,7 @@ const CardList = ({data, handleClick}) => {
         <Card 
           key={post._id}
           creator={post.creator}
+          created_at={post.created_at}
           content={post.content}
           tag={post.tag}
         />
@@ -37,13 +38,13 @@ const Feed = () => {
   const fetchPost = async () => {
     const res = await fetch('/api/post')
     const data = await res.json()
-
+    console.log(data)
     setPosts(data)
   }
 
   return (
     <section className='bg-dark-bg text-white'>
-      <main className="w-full max-w-7xl mx-auto my-10 sm:my-20 flex flex-col z-10">
+      <main className="w-full max-w-7xl mx-auto my-10 sm:my-20 flex flex-col">
         <header className="px-5 py-20 sm:px-10 flex flex-col gap-5">
           <h1 className="head_text text-4xl sm:text-6xl">
             Discover great ideas <br/> from people like you.
@@ -54,7 +55,7 @@ const Feed = () => {
           <input 
             type="text"
             placeholder='Search Tags or Username'
-            className='p-3 text-zinc-500 rounded-md blurred_card'
+            className='p-3 text-zinc-500 rounded-md'
             value={search}
             onChange={handleSearch} />
         </header>
