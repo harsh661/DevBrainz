@@ -31,8 +31,8 @@ const Home = () => {
               src='/assets/images/hero.svg'
               alt='Developers discussing their ideas'
               width={800}
-              height={500}
-              className="hidden sm:block"
+              height={800}
+              className="hidden sm:block h-auto w-auto"
             />
           </div>
         </header>

@@ -22,7 +22,7 @@ const Card = ({creator: {userName, email, image}, content, tag, created_at}) => 
             height={40}
            />
           <div>
-            <div className="md:text-lg font-bold text-dark-text">{userName}</div>
+            <div className="font-bold text-dark-text">{userName}</div>
             <div className='text-zinc-500 text-xs md:text-sm'>{email}</div>
           </div>
         </div>
@@ -33,7 +33,7 @@ const Card = ({creator: {userName, email, image}, content, tag, created_at}) => 
 
       </div>
 
-      <div className="my-5 md:text-xl text-black">
+      <div className="my-5 text-black">
         {content}
       </div>
       <div className='text-zinc-500'>

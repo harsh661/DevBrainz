@@ -28,18 +28,18 @@ const Feed = () => {
   const[posts, setPosts] = useState([])
 
   useEffect(() => {
+    const fetchPost = async () => {
+      const res = await fetch('/api/post')
+      const data = await res.json()
+      console.log(data)
+      setPosts(data)
+    }
+    
     fetchPost()
   }, [])
 
   const handleSearch = (e) => {
     setSearch(e.target.value)
-  }
-
-  const fetchPost = async () => {
-    const res = await fetch('/api/post')
-    const data = await res.json()
-    console.log(data)
-    setPosts(data)
   }
 
   return (
