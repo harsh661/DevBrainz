@@ -20,7 +20,7 @@ const Navbar = () => {
   }, [])
 
   return (
-    <nav className={`sticky top-0 bg-white font-semibold flex justify-between items-center w-full text-dark-text sm:px-6 px-3 py-3`}>
+    <nav className={`fixed top-0 bg-white font-semibold flex justify-between items-center w-full text-dark-text sm:px-6 px-3 py-3`}>
         <div className='flex gap-2 items-center sm:text-2xl text-xl'>
             <Link href='/' className='flex items-center gap-2'>
               <img src="/assets/images/logo.png" alt="Logo" width={48}/>
@@ -71,7 +71,7 @@ const Navbar = () => {
         {/* If navbar is open, show the mobile nav-menu */}
 
         {nav && (
-          <aside className='navigation blurred_card flex flex-col gap-5 w-2/3 md:w-80 md:rounded-lg h-auto pt-20 md:pt-5 p-5 absolute top-0 md:top-20 right-0 md:right-6'>
+          <aside className='navigation blurred_card flex flex-col gap-5 w-2/3 md:w-80 rounded-lg h-auto pt-20 md:pt-5 p-5 absolute top-20 md:top-20 right-3 md:right-6'>
             {session?.user
             ? (<>
                 <Link href='/profile' onClick={()=>setNav(false)} className='flex items-center gap-2'>

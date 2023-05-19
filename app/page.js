@@ -9,7 +9,7 @@ const Home = () => {
   const {data: session} = useSession()
   return (
     <section>
-      <main className="w-full max-w-7xl mx-auto my-10 sm:my-20 flex flex-col z-10">
+      <main className="w-full max-w-7xl mx-auto my-20 sm:my-20 flex flex-col z-10">
         <header className="p-5 sm:p-10 flex flex-col gap-5">
           <h1 className="head_text text-5xl sm:text-7xl">
             Welcome to the ultimate platform <br/> to share and explore new ideas.
