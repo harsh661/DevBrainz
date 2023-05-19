@@ -1,6 +1,7 @@
 import Navbar from '@components/Navbar'
 import Provider from '@components/Provider'
 import '@styles/globals.css'
+import Head from 'next/head'
 
 export const metadata = {
   title: 'DevBrainz - A community of great minds',
@@ -11,6 +12,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <head>
+          <meta property="og:image" content="https://i.ibb.co/r0472JN/Screenshot-from-2023-04-10-17-38-03-1.png"/>
+          <meta property="og:image:alt" content="Harsh Raj" />
+          <meta name="twitter:image" content="https://i.ibb.co/r0472JN/Screenshot-from-2023-04-10-17-38-03-1.png" />
+        </head>
         <Provider>   
           <div className='main'>
             <div className='gradient'/>
