@@ -13,7 +13,7 @@ const CardList = ({data, handleClick}) => {
         <Card 
           key={post._id}
           creator={post.creator}
-          created_at={post.created_at}
+          created_at={post.createdAt}
           content={post.content}
           tag={post.tag}
         />
@@ -31,7 +31,6 @@ const Feed = () => {
     const fetchPost = async () => {
       const res = await fetch('/api/post')
       const data = await res.json()
-      console.log(data)
       setPosts(data)
     }
     

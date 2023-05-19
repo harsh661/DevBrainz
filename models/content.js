@@ -14,7 +14,7 @@ const PromptSchema = new Schema({
         required: [true, "Tags are required"]
     }
 }, 
-{ timestamps: { createdAt: 'createdDate',updatedAt: 'updatedDate' }}
+{ timestamps: true}
 )
 
 
